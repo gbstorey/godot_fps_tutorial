@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://17hde7ehfasd"]
+
+[ext_resource type="Texture2D" uid="uid://evhncquhnuk8" path="res://environment/raw_assets/brickwall_brick_ivy.png" id="1_rpd04"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ky8ej"]
+resource_name = "brick_ivy"
+cull_mode = 2
+albedo_texture = ExtResource("1_rpd04")
+roughness = 0.5
+emission_enabled = true
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nhyt0"]
+_surfaces = [{
+"aabb": AABB(-2, 0, -0.3, 4, 3.00001, 0.6),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 3, 0, 7, 0, 2, 0, 3, 0, 6, 0, 7, 0, 2, 0, 5, 0, 1, 0, 2, 0, 7, 0, 5, 0, 6, 0, 0, 0, 4, 0, 6, 0, 3, 0, 0, 0),
+"name": "brick_ivy",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qqbpg"]
+resource_name = "brickwall_Cube_012"
+_surfaces = [{
+"aabb": AABB(-2, 0, -0.3, 4, 3.00001, 0.6),
+"attribute_data": PackedByteArray(0, 128, 0, 128, 0, 128, 255, 255, 140, 153, 255, 255, 140, 153, 0, 128, 72, 128, 33, 128, 72, 128, 30, 224, 254, 255, 30, 224, 254, 255, 33, 128, 0, 128, 0, 128, 0, 128, 255, 255, 140, 153, 255, 255, 140, 153, 0, 128, 72, 128, 33, 128, 72, 128, 30, 224, 254, 255, 30, 224, 255, 255, 33, 128, 155, 127, 102, 236, 155, 127, 153, 255, 85, 255, 153, 255, 85, 255, 102, 236, 179, 255, 191, 146, 179, 255, 140, 127, 249, 127, 140, 127, 249, 127, 191, 146),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_ky8ej"),
+"name": "brick_ivy",
+"primitive": 3,
+"uv_scale": Vector4(2.0041, 1.99991, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 254, 255, 255, 255, 255, 191, 255, 255, 254, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 255, 255, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 254, 255, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 255, 255, 254, 255, 255, 255, 255, 191, 255, 255, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 0, 0, 255, 191, 0, 0, 254, 255, 255, 255, 255, 191, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 254, 255, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nhyt0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kk7e4"]
+size = Vector3(4.02435, 3.00793, 0.59906)
+
+[node name="BrickWall" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_qqbpg")
+skeleton = NodePath("")
+
+[node name="StaticBody" type="StaticBody3D" parent="Mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00610781, 0, 0)
+
+[node name="CollisionBox" type="CollisionShape3D" parent="Mesh/StaticBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0027771, 1.49945, -0.000823975)
+shape = SubResource("BoxShape3D_kk7e4")
