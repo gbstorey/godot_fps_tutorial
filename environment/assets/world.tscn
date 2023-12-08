@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcynieromgdcq"]
+[gd_scene load_steps=13 format=3 uid="uid://bcynieromgdcq"]
 
 [ext_resource type="Texture2D" uid="uid://lxu6fsxeyg7m" path="res://environment/raw_assets/grass_lowres.png" id="1_amlq1"]
 [ext_resource type="PackedScene" uid="uid://bvcq6fwml4hqr" path="res://environment/assets/shed.tscn" id="2_dt7s2"]
 [ext_resource type="PackedScene" uid="uid://17hde7ehfasd" path="res://environment/assets/brick_wall.tscn" id="3_yltpc"]
+[ext_resource type="PackedScene" uid="uid://byualaoxyxoi0" path="res://characters/player/player.tscn" id="4_dyer8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka774"]
 albedo_texture = ExtResource("1_amlq1")
@@ -12,8 +13,8 @@ uv1_scale = Vector3(50, 50, 50)
 material = SubResource("StandardMaterial3D_ka774")
 size = Vector3(100, 1, 100)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q5tpp"]
-data = PackedVector3Array(-50, 0.5, 50, 50, 0.5, 50, -50, -0.5, 50, 50, 0.5, 50, 50, -0.5, 50, -50, -0.5, 50, 50, 0.5, -50, -50, 0.5, -50, 50, -0.5, -50, -50, 0.5, -50, -50, -0.5, -50, 50, -0.5, -50, 50, 0.5, 50, 50, 0.5, -50, 50, -0.5, 50, 50, 0.5, -50, 50, -0.5, -50, 50, -0.5, 50, -50, 0.5, -50, -50, 0.5, 50, -50, -0.5, -50, -50, 0.5, 50, -50, -0.5, 50, -50, -0.5, -50, 50, 0.5, 50, -50, 0.5, 50, 50, 0.5, -50, -50, 0.5, 50, -50, 0.5, -50, 50, 0.5, -50, -50, -0.5, 50, 50, -0.5, 50, -50, -0.5, -50, 50, -0.5, 50, 50, -0.5, -50, -50, -0.5, -50)
+[sub_resource type="BoxShape3D" id="BoxShape3D_odo31"]
+size = Vector3(100, 1, 100)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_i502a"]
 vertices = PackedVector3Array(-2, 1, -9.75, -0.25, 1, -10, -0.5, 1, -49.75, -49.75, 1, -49.75, -49.75, 1, -8.5, -49.75, 1, -8.5, -2, 1, -8.25, -2, 1, -9.75, -0.25, 1, -10, 4.5, 1, -10, 4.75, 1, -49.75, -0.5, 1, -49.75, 4.75, 1, -49.75, 4.5, 1, -10, 6.25, 1, -9.75, 49.75, 1, -7.75, 49.75, 1, -49.75, 6.25, 1, -9.75, 6.25, 1, -7.75, 49.75, 1, -7.75, -1.5, 3.25, -5.5, -1, 3.25, -5.5, -0.75, 3.25, -9.25, -1.5, 3.25, -9.5, -0.75, 3.25, 2.5, -1.5, 3.25, 3, 5.75, 3.25, 3, 5.5, 3.25, 2.25, -0.75, 3.25, 2.5, -1, 3.25, -1.25, -1.5, 3.25, -1.25, -1.5, 3.25, 3, 5.5, 3.25, 2.25, 5.75, 3.25, 3, 5.75, 3.25, -9.5, 5.5, 3.25, -9, 5.75, 3.25, -9.5, -1.5, 3.25, -9.5, -0.75, 3.25, -9.25, 5.5, 3.25, -9, -0.25, 1, -1.75, -0.5, 1, -1.5, -0.5, 1, 2, 5, 1, 2, 4.25, 1, -1.5, -0.5, 1, -8.75, -0.75, 1, -5, -0.25, 1, -4.75, 4.5, 1, -4.75, 5, 1, -8.75, 4.5, 1, -4.75, 4.25, 1, -1.5, 5, 1, 2, 5, 1, -8.75, -49.75, 1, -6.5, -2, 1, -6.75, -2, 1, -8.25, -49.75, 1, -8.5, 6.25, 1, 1.25, 49.75, 1, 1.25, 49.75, 1, -7.75, 6.25, 1, -7.75, -2, 1, -1.5, -0.5, 1, -1.5, -0.25, 1, -1.75, -0.25, 1, -4.75, -0.75, 1, -5, -2, 1, -5.25, -2, 1, -1.5, -0.25, 1, -1.75, -0.25, 1, -4.75, -2, 1, -5.25, -49.75, 1, -6.5, -49.75, 1, -0.25, -2, 1, -5.25, -2, 1, -6.75, -49.75, 1, -6.5, -49.75, 1, -0.25, -2, 1, 0, -2, 1, -1.5, 0.25, 4, -4.5, 0.25, 4, -2, 4, 4, -2, 4, 4, -4.5, 0.25, 4.75, -3.25, 4, 4.75, -3.25, 0.5, 1, -3.75, 0.5, 1, -2.75, 3.5, 1, -2.75, 3.5, 1, -3.75, -49.75, 1, 2, -2, 1, 1.75, -2, 1, 0, -49.75, 1, -0.25, 49.75, 1, 1.25, 6.25, 1, 1.25, 6.25, 1, 3.25, 49.75, 1, 1.25, 6.25, 1, 3.25, 4.5, 1, 3.5, 4.75, 1, 49.75, 49.75, 1, 49.75, -0.5, 1, 49.75, -0.25, 1, 3.5, -2, 1, 3.25, -49.75, 1, 2, -49.75, 1, 49.75, -2, 1, 3.25, -2, 1, 1.75, -49.75, 1, 2, -0.5, 1, 49.75, 4.75, 1, 49.75, 4.5, 1, 3.5, -0.25, 1, 3.5)
@@ -44,16 +45,8 @@ sky = SubResource("Sky_ykg37")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.372251, 0.782547, -4.02487)
 
 [node name="Environment" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 metadata/_edit_lock_ = true
-
-[node name="Ground" type="MeshInstance3D" parent="Environment"]
-mesh = SubResource("BoxMesh_tpncv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Ground"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_q5tpp")
 
 [node name="Shed" parent="Environment" instance=ExtResource("2_dt7s2")]
 transform = Transform3D(1, 0, 1.58933e-08, 0, 1, 0, -1.58933e-08, 0, 1, 2, 0, -3.18273)
@@ -87,6 +80,16 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.277
 [node name="BrickWall9" parent="Environment/FullWall" instance=ExtResource("3_yltpc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.27758, 0, 0.68201)
 
+[node name="Ground" type="StaticBody3D" parent="Environment"]
+collision_mask = 0
+
+[node name="Mesh" type="MeshInstance3D" parent="Environment/Ground"]
+mesh = SubResource("BoxMesh_tpncv")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Ground"]
+shape = SubResource("BoxShape3D_odo31")
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 visible = false
 navigation_mesh = SubResource("NavigationMesh_i502a")
@@ -105,3 +108,7 @@ directional_shadow_mode = 0
 directional_shadow_fade_start = 0.121
 directional_shadow_max_distance = 125.2
 directional_shadow_pancake_size = 32.6
+
+[node name="Player" parent="." instance=ExtResource("4_dyer8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3123, 2.27202, -3.97839)
+collision_layer = 3
